@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Francesc Leon Chamizo — Administración de Sistemas y Redes</title>
+  <meta name="description" content="Técnico en Sistemas Microinformáticos y Redes. Administro infraestructura Linux, redes, Docker y automatización. Candidato a prácticas de ASIX." />
+  <meta property="og:title" content="Francesc Leon Chamizo — Administración de Sistemas y Redes" />
+  <meta property="og:description" content="Infraestructura Linux, redes, Docker y automatización en producción." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__brand">fleoncha<span>.dev</span></a>
+      <nav class="nav__links">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#skills">Skills</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Menú">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <p class="hero__eyebrow">// Administración de Sistemas · Redes · Automatización</p>
+        <h1 class="hero__title">Francesc Leon Chamizo</h1>
+        <p class="hero__role">Técnico en Sistemas Microinformáticos y Redes (SMX) · Cursando ASIX</p>
+        <p class="hero__lead">
+          Construyo, aseguro y mantengo <strong>infraestructura Linux real</strong>:
+          servidores, redes, contenedores Docker, túneles y servicios en producción 24/7.
+          Busco unas <strong>prácticas de grado superior (ASIX)</strong>.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn" href="assets/cv.pdf" id="cvLink">Descargar CV</a>
+          <a class="btn btn--ghost" href="https://github.com/elfleoncha" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/francescleo" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MI -->
+    <section id="sobre-mi" class="section">
+      <div class="container">
+        <h2 class="section__title"><span>01.</span> Sobre mí</h2>
+        <div class="about">
+          <p>
+            Tengo 18 años y estoy acabando <strong>SMX en Monlau (Barcelona)</strong>. Lo que más me engancha
+            es montar cosas que funcionan solas: un servidor que aguanta, una red que no se cae y
+            automatizaciones que te ahorran horas.
+          </p>
+          <p>
+            En mi tiempo libre administro un <strong>laboratorio propio</strong> con más de 20 servicios
+            en producción: gateway de IA, servidores de Minecraft con túneles, bots de Discord,
+            web con base de datos y paneles internos. Todo desplegado con <strong>Linux, Docker,
+            systemd/PM2, Tailscale y Cloudflare</strong>.
+          </p>
+          <p>
+            Soy autodidacta, me gusta documentar lo que hago y trabajo bien en equipo. Busco unas
+            prácticas donde aportar y seguir creciendo en <strong>sistemas, redes y cloud</strong>.
+          </p>
+          <ul class="about__facts">
+            <li><span>📍</span> Barcelona, España</li>
+            <li><span>🎓</span> SMX · ASIX (Monlau)</li>
+            <li><span>🧪</span> 20+ servicios self-hosted</li>
+            <li><span>🌐</span> Linux · Redes · Docker</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title"><span>02.</span> Skills</h2>
+        <div class="grid grid--skills">
+          <article class="card">
+            <h3>Sistemas</h3>
+            <ul>
+              <li>Linux (Ubuntu / Debian)</li>
+              <li>systemd, PM2, cron</li>
+              <li>Docker &amp; Docker Compose</li>
+              <li>Bash / scripting</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Redes</h3>
+            <ul>
+              <li>TCP/IP, DNS, DHCP</li>
+              <li>SSH, RCON, túneles</li>
+              <li>Tailscale (VPN mesh)</li>
+              <li>Cloudflare Tunnel</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Automatización &amp; Dev</h3>
+            <ul>
+              <li>Node.js (Express)</li>
+              <li>Python, APIs REST</li>
+              <li>WebSockets, WebRTC</li>
+              <li>HTML · CSS · JS</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Servicios &amp; Seguridad</h3>
+            <ul>
+              <li>MongoDB, Nginx</li>
+              <li>Backups &amp; monitorización</li>
+              <li>HTTPS/HSTS, hardening</li>
+              <li>Gestión de secretos</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="section">
+      <div class="container">
+        <h2 class="section__title"><span>03.</span> Proyectos</h2>
+        <div class="grid grid--projects">
+
+          <article class="card card--project">
+            <header><h3>Infraestructura self-hosted</h3><span class="tag tag--live">En producción</span></header>
+            <p>Laboratorio propio con 20+ servicios 24/7: gateway de IA, web, paneles y bases de datos.
+              Desplegado con Linux, Docker y PM2, publicado vía Cloudflare Tunnel y accesible por VPN mesh (Tailscale).</p>
+            <ul class="card__stack"><li>Linux</li><li>Docker</li><li>Cloudflare</li><li>Tailscale</li><li>PM2</li></ul>
+          </article>
+
+          <article class="card card--project">
+            <header><h3>VintedAI</h3><span class="tag tag--live">linkdash.xyz</span></header>
+            <p>Web con IA que analiza prendas y genera listados listos para publicar en Vinted. Backend Node/Express
+              + MongoDB, login con Google (OAuth 2.0 + PKCE), búsqueda por imagen y SEO multiidioma (ES/EN/FR/DE/IT).</p>
+            <ul class="card__stack"><li>Node.js</li><li>MongoDB</li><li>OAuth</li><li>Cloudflare</li><li>SEO</li></ul>
+            <a class="card__link" href="https://linkdash.xyz" target="_blank" rel="noopener">Ver web ↗</a>
+          </article>
+
+          <article class="card card--project">
+            <header><h3>Cluster Minecraft</h3><span class="tag">Linux · Redes</span></header>
+            <p>Servidor Fabric 26.2 con proxy (Gate) y entrada pública, whitelist y autenticación, backups automáticos
+              y optimización de JVM (flags de Aikar). Monitorización y consola por RCON.</p>
+            <ul class="card__stack"><li>Fabric</li><li>Gate</li><li>RCON</li><li>Backups</li><li>JVM</li></ul>
+          </article>
+
+          <article class="card card--project">
+            <header><h3>Bots de Discord</h3><span class="tag">Node.js</span></header>
+            <p>Bot de casino con panel web y base de datos MongoDB sobre un único proceso Node, más bot de comunidad.
+              Gestión de procesos, logs y despliegue continuo con PM2.</p>
+            <ul class="card__stack"><li>discord.js</li><li>MongoDB</li><li>Express</li><li>PM2</li></ul>
+          </article>
+
+          <article class="card card--project">
+            <header><h3>PCshare / TabRelay</h3><span class="tag">Extensiones Chrome</span></header>
+            <p>Extensión MV3 para pasar pestañas, archivos y texto entre PCs de la misma red, con relay propio
+              (Node + WebSocket) y versión P2P por WebRTC (handshake manual y documento offscreen).</p>
+            <ul class="card__stack"><li>WebRTC</li><li>WebSocket</li><li>MV3</li><li>IndexedDB</li></ul>
+          </article>
+
+          <article class="card card--project">
+            <header><h3>Panel OSINT</h3><span class="tag">Seguridad</span></header>
+            <p>Herramienta de reconocimiento (email, usuario, IP, dominio, teléfono) que funciona sin API keys
+              usando DNS-over-HTTPS, RDAP, crt.sh y 22 plataformas de username. Cache y export JSON.</p>
+            <ul class="card__stack"><li>Node.js</li><li>DoH</li><li>RDAP</li><li>APIs</li></ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section section--alt">
+      <div class="container contact">
+        <h2 class="section__title"><span>04.</span> Contacto</h2>
+        <p class="contact__lead">¿Buscas un perfil junior para sistemas y redes? Escríbeme.</p>
+        <div class="contact__links">
+          <a class="btn btn--primary" href="mailto:fleonchamizo@gmail.com">fleonchamizo@gmail.com</a>
+          <a class="btn btn--ghost" href="https://github.com/elfleoncha" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/francescleo" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Francesc Leon Chamizo</p>
+      <p>Hecho con Linux, café y demasiadas terminales.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
