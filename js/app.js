@@ -228,6 +228,21 @@
       ST.create({ onUpdate: function (self) { skewSetter(gsap.utils.clamp(-11, 11, self.getVelocity() / -260)); } });
     }
 
+    /* Tarjetas de proyecto: se inclinan con el raton */
+    if (fine) {
+      gsap.utils.toArray(".proj").forEach(function (card) {
+        gsap.set(card, { transformPerspective: 900 });
+        var rx = gsap.quickTo(card, "rotationX", { duration: 0.5, ease: "power3" });
+        var ry = gsap.quickTo(card, "rotationY", { duration: 0.5, ease: "power3" });
+        card.addEventListener("pointermove", function (e) {
+          var r = card.getBoundingClientRect();
+          ry(((e.clientX - r.left) / r.width - 0.5) * 8);
+          rx(-((e.clientY - r.top) / r.height - 0.5) * 8);
+        });
+        card.addEventListener("pointerleave", function () { rx(0); ry(0); });
+      });
+    }
+
     /* galeria: magnet hacia el cursor */
     if (fine) {
       gsap.utils.toArray(".shot").forEach(function (shot) {

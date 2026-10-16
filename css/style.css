@@ -222,14 +222,14 @@ html.no-anim .work__viewport, .work--fallback .work__viewport { overflow-x: auto
   background: linear-gradient(160deg, var(--card), var(--bg) 70%);
   border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(26px, 3.4vw, 54px);
   display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden;
-  transition: border-color .3s, transform .3s;
+  transition: border-color .3s, box-shadow .35s;
 }
 .proj__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: .55; filter: saturate(1.05) contrast(1.03); transition: opacity .5s, transform .6s; }
 [data-theme="light"] .proj__img { opacity: .28; }
 .proj::before { content: ""; position: absolute; inset: 0; z-index: 1; background: radial-gradient(60% 60% at 80% 0%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 70%); opacity: 0; transition: opacity .4s; }
 .proj::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, var(--scrim) 26%, color-mix(in srgb, var(--scrim) 62%, transparent) 62%, color-mix(in srgb, var(--scrim) 22%, transparent) 100%); }
 .proj > :not(.proj__img):not(.proj__more) { position: relative; z-index: 2; }
-.proj:hover { border-color: var(--accent); }
+.proj:hover { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 18px 55px color-mix(in srgb, var(--accent) 32%, transparent); }
 .proj:hover::before { opacity: 1; }
 .proj:hover .proj__img { opacity: .7; transform: scale(1.04); }
 [data-theme="light"] .proj:hover .proj__img { opacity: .4; }
@@ -285,10 +285,10 @@ html.no-anim .work__viewport, .work--fallback .work__viewport { overflow-x: auto
 
 /* Proyecto: detalle al pasar el ratón */
 .proj__more {
-  position: absolute; inset: 0; z-index: 3; display: flex; flex-direction: column; justify-content: flex-end; gap: 14px;
-  padding: clamp(26px, 3.4vw, 54px); background: color-mix(in srgb, var(--scrim) 88%, transparent);
-  backdrop-filter: blur(9px); -webkit-backdrop-filter: blur(9px);
-  opacity: 0; transform: translateY(24px); transition: opacity .35s ease, transform .5s cubic-bezier(.2,.7,.2,1); pointer-events: none;
+  position: absolute; left: 0; right: 0; top: 0; z-index: 3; display: flex; flex-direction: column; gap: 12px;
+  padding: clamp(22px, 3vw, 42px); padding-bottom: clamp(44px, 6vw, 78px);
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--scrim) 94%, transparent), color-mix(in srgb, var(--scrim) 74%, transparent) 62%, transparent);
+  opacity: 0; transform: translateY(-14px); transition: opacity .35s ease, transform .45s cubic-bezier(.2,.7,.2,1); pointer-events: none;
 }
 .proj:hover .proj__more, .proj:focus-within .proj__more { opacity: 1; transform: none; }
 .proj__more h4 { font-family: var(--mono); font-size: .76rem; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); }
