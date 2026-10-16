@@ -269,12 +269,6 @@ html.no-anim .work__viewport, .work--fallback .work__viewport { overflow-x: auto
 .lab__facts span { color: var(--muted); font-size: .86rem; }
 
 .grid { display: grid; gap: 18px; }
-.grid--services { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-.svc { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; transition: border-color .25s, transform .25s, box-shadow .25s; }
-.svc:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow); }
-.svc__ico { font-size: 1.6rem; display: block; margin-bottom: 14px; }
-.svc h3 { font-size: 1.15rem; margin-bottom: 10px; }
-.svc p { color: var(--muted); font-size: .95rem; }
 
 /* Proyecto: detalle al pasar el ratón */
 .proj__more {
