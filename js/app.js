@@ -10,7 +10,7 @@
   var fine = matchMedia("(pointer: fine)").matches;
   var hasGsap = !!window.gsap;
 
-  if (!hasGsap || reduce) html.classList.add("no-anim");
+  if (!hasGsap) html.classList.add("no-anim");
 
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -22,7 +22,7 @@
 
   /* ---------- Lenis + ScrollTrigger ---------- */
   var lenis = null;
-  if (hasGsap && !reduce) {
+  if (hasGsap) {
     gsap.registerPlugin(window.ScrollTrigger);
     if (window.Lenis) {
       lenis = new window.Lenis({ duration: 1.15, smoothWheel: true, wheelMultiplier: 1 });
@@ -57,7 +57,7 @@
   /* ---------- Cursor custom ---------- */
   var cursor = document.getElementById("cursor");
   var cursorDot = document.getElementById("cursorDot");
-  if (cursor && cursorDot && fine && !reduce) {
+  if (cursor && cursorDot && fine) {
     document.body.classList.add("cursor-on");
     var cx = innerWidth / 2, cy = innerHeight / 2, mx = cx, my = cy;
     window.addEventListener("pointermove", function (e) {
@@ -77,7 +77,7 @@
   var typeEl = document.getElementById("typewriter");
   if (typeEl) {
     var words = (typeEl.getAttribute("data-words") || "").split("|").filter(Boolean);
-    if (reduce || !words.length) { typeEl.textContent = words[0] || ""; }
+    if (!words.length) { typeEl.textContent = words[0] || ""; }
     else {
       var wi = 0, ci = 0, del = false;
       (function tick() {
@@ -130,7 +130,7 @@
     });
   }
   var aboutBig = document.getElementById("aboutBig");
-  if (aboutBig && hasGsap && !reduce) splitWords(aboutBig);
+  if (aboutBig && hasGsap) splitWords(aboutBig);
 
   /* ---------- PRELOADER + intro ---------- */
   var pre = document.getElementById("preloader");
@@ -146,7 +146,7 @@
     if (hasGsap) setTimeout(function () { window.ScrollTrigger.refresh(); }, 350);
   }
   function heroIntro() {
-    if (!hasGsap || reduce) return;
+    if (!hasGsap) return;
     gsap.timeline()
       .from(".hero__title .line__inner", { yPercent: 110, duration: 1.1, stagger: 0.09, ease: "power4.out" })
       .from(".hero__eyebrow", { opacity: 0, y: 22, duration: 0.7 }, "-=0.8")
@@ -155,7 +155,7 @@
       .from(".hero__foot", { opacity: 0, duration: 0.8 }, "-=0.6");
   }
 
-  if (hasGsap && !reduce) {
+  if (hasGsap) {
     var obj = { v: 0 };
     gsap.to(obj, {
       v: 100, duration: 1.6, ease: "power2.inOut",
@@ -174,7 +174,7 @@
   setTimeout(begin, 3600); // seguro: nunca se queda colgado en el preloader
 
   /* ---------- SCROLL ANIMATIONS (GSAP) ---------- */
-  if (hasGsap && !reduce) {
+  if (hasGsap) {
     var ST = window.ScrollTrigger;
 
     /* reveal genérico */

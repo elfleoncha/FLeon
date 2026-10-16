@@ -96,7 +96,7 @@ if (canvas && hero) {
 
       renderer.render(scene, camera);
     }
-    if (reduce) renderer.render(scene, camera);
+    if (reduce) renderer.setAnimationLoop(frame);
     else renderer.setAnimationLoop(frame);
   }
 }

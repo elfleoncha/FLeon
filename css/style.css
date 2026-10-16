@@ -243,8 +243,7 @@ html.no-anim [data-reveal], html.no-anim .line__inner, html.no-anim .about__big 
 @media (hover: none), (pointer: coarse) { .cursor, .cursor-dot { display: none; } }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
-  .js .line__inner, .js [data-reveal], .js .about__big .w { transform: none !important; opacity: 1 !important; }
+  .grain, .hero__glow { animation: none; }
 }
 
 @media print {
