@@ -252,11 +252,6 @@ html.no-anim .work__viewport, .work--fallback .work__viewport { overflow-x: auto
 .contact__row a { font-family: var(--mono); font-size: .9rem; color: var(--muted); }
 .contact__row a:hover { color: var(--accent); }
 
-/* SIGNATURE */
-.sig { width: min(460px, 78%); margin: clamp(40px, 6vh, 70px) auto 0; color: var(--accent); }
-.sig svg { width: 100%; height: auto; display: block; overflow: visible; }
-.sig__path { stroke: currentColor; fill: none; }
-
 /* FOOTER */
 .footer { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; padding: 30px var(--pad); border-top: 1px solid var(--line); color: var(--muted); font-size: .84rem; }
 .footer__top { color: var(--accent); font-weight: 600; }
