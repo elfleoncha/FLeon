@@ -10,7 +10,7 @@
   --fg: #f5f4f8;
   --muted: #9a93ad;
   --accent: #a855f7;      /* morado */
-  --accent2: #c6ff3d;     /* verde ácido */
+  --accent2: #c084fc;     /* violeta */
   --on-accent: #ffffff;
   --line: rgba(255, 255, 255, .12);
   --card: #120f1a;
@@ -30,7 +30,7 @@
   --fg: #150f21;
   --muted: #5b5470;
   --accent: #7c3aed;
-  --accent2: #4d7c0f;
+  --accent2: #9333ea;
   --on-accent: #ffffff;
   --line: rgba(30, 15, 60, .14);
   --card: #ffffff;
@@ -180,8 +180,8 @@ body.cursor-on, body.cursor-on a, body.cursor-on button { cursor: none; }
   will-change: transform;
 }
 .btn:hover { border-color: var(--accent); color: var(--accent); }
-.btn--acid { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
-.btn--acid:hover { color: var(--on-accent); filter: brightness(1.08); }
+.btn--primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn--primary:hover { color: var(--on-accent); filter: brightness(1.08); }
 .btn--ghost { background: transparent; color: var(--muted); }
 .btn--big { font-size: clamp(1rem, 2.4vw, 1.5rem); padding: 20px 38px; }
 
