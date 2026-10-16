@@ -208,6 +208,15 @@
       });
     });
 
+    /* parallax en las imagenes de la galeria */
+    gsap.utils.toArray("[data-parallax-img]").forEach(function (img) {
+      var sp = parseFloat(img.getAttribute("data-parallax-img")) || 0.12;
+      gsap.fromTo(img, { yPercent: -(sp * 40) }, {
+        yPercent: sp * 40, ease: "none",
+        scrollTrigger: { trigger: img.parentElement, start: "top bottom", end: "bottom top", scrub: true }
+      });
+    });
+
     /* hero se difumina al salir */
     gsap.to(".hero__content", {
       yPercent: 26, opacity: 0, ease: "none",
