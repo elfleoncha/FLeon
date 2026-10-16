@@ -208,6 +208,16 @@
       });
     });
 
+    /* firma: se dibuja sola al llegar a contacto */
+    var sigPath = document.querySelector(".sig__path");
+    if (sigPath) {
+      gsap.set(sigPath, { strokeDasharray: 1, strokeDashoffset: 1 });
+      gsap.to(sigPath, {
+        strokeDashoffset: 0, duration: 2.6, ease: "power1.inOut",
+        scrollTrigger: { trigger: "#contact", start: "top 62%" }
+      });
+    }
+
     /* hero se difumina al salir */
     gsap.to(".hero__content", {
       yPercent: 26, opacity: 0, ease: "none",
