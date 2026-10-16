@@ -248,22 +248,64 @@
       <div class="wrap">
         <p class="kicker" data-reveal>04 — El laboratorio</p>
         <h2 class="mega" data-reveal>LABORATORIO<span>_</span></h2>
-        <p class="lab__lead" data-reveal>Todo esto corre en un <em>mini PC en mi casa</em>, encendido 24/7 y sin pagar cloud: <em>Linux, Docker, Tailscale y Cloudflare</em> hacen el trabajo. Estos son algunos de los servicios que tengo en marcha ahora mismo.</p>
-        <div class="gallery">
-          <figure class="shot"><div class="shot__inner"><img src="assets/lab/01.jpg" alt="Landing de asistente IA para PYMES" loading="lazy" data-parallax-img="0.16" /></div><figcaption>Asistente IA · PYMES</figcaption></figure>
-          <figure class="shot"><div class="shot__inner"><img src="assets/lab/02.jpg" alt="Web inmobiliaria con buscador y mapa" loading="lazy" data-parallax-img="0.26" /></div><figcaption>Inmobiliaria · cliente</figcaption></figure>
-          <figure class="shot"><div class="shot__inner"><img src="assets/lab/03.jpg" alt="VintedAI — web con IA para Vinted" loading="lazy" data-parallax-img="0.10" /></div><figcaption>VintedAI · producción</figcaption></figure>
-          <figure class="shot"><div class="shot__inner"><img src="assets/lab/04.jpg" alt="Rüt — tracker de rutinas gamificado" loading="lazy" data-parallax-img="0.24" /></div><figcaption>Rüt · tracker</figcaption></figure>
-          <figure class="shot"><div class="shot__inner"><img src="assets/lab/05.jpg" alt="Mission Control — dashboard de infraestructura" loading="lazy" data-parallax-img="0.12" /></div><figcaption>Mission Control · dashboard</figcaption></figure>
-          <figure class="shot"><div class="shot__inner"><img src="assets/lab/06.jpg" alt="Panel OSINT de reconocimiento" loading="lazy" data-parallax-img="0.28" /></div><figcaption>OSINT · seguridad</figcaption></figure>
+        <p class="lab__lead" data-reveal>Todo esto corre en un <em>mini PC en mi casa</em>, encendido 24/7 y sin pagar cloud: <em>Linux, Docker, Tailscale y Cloudflare</em> hacen el trabajo. Esto es lo que hay dentro, y para qué sirve cada cosa.</p>
+                <div class="labgrid">
+          <article class="labitem">
+            <figure class="shot"><div class="shot__inner"><img src="assets/lab/01.jpg" alt="Landing de un asistente de IA para PYMES" loading="lazy" data-parallax-img="0.28" /></div></figure>
+            <div class="labitem__body">
+              <span class="labitem__n">01 · Web con IA</span>
+              <h3>Asistente para PYMES</h3>
+              <p>Landing y panel de un asistente de IA pensado para pequeñas empresas. Backend Node/Express con MongoDB, publicado tras Cloudflare.</p>
+            </div>
+          </article>
+          <article class="labitem">
+            <figure class="shot"><div class="shot__inner"><img src="assets/lab/02.jpg" alt="Web de inmobiliaria con buscador y mapa" loading="lazy" data-parallax-img="0.14" /></div></figure>
+            <div class="labitem__body">
+              <span class="labitem__n">02 · Cliente</span>
+              <h3>Inmobiliaria</h3>
+              <p>Web con buscador y mapa para un cliente real. Frontend propio y API en Express con MongoDB.</p>
+            </div>
+          </article>
+          <article class="labitem">
+            <figure class="shot"><div class="shot__inner"><img src="assets/lab/03.jpg" alt="VintedAI, web con IA para Vinted" loading="lazy" data-parallax-img="0.32" /></div></figure>
+            <div class="labitem__body">
+              <span class="labitem__n">03 · Producto propio</span>
+              <h3>VintedAI</h3>
+              <p>App con IA que analiza una prenda y genera el anuncio listo para Vinted. Node, MongoDB y login con Google.</p>
+            </div>
+          </article>
+          <article class="labitem">
+            <figure class="shot"><div class="shot__inner"><img src="assets/lab/04.jpg" alt="Rüt, tracker de rutinas gamificado" loading="lazy" data-parallax-img="0.12" /></div></figure>
+            <div class="labitem__body">
+              <span class="labitem__n">04 · App propia</span>
+              <h3>Rüt</h3>
+              <p>Tracker de rutinas gamificado con rangos, XP y rachas. HTML, CSS y JS puro, sin backend.</p>
+            </div>
+          </article>
+          <article class="labitem">
+            <figure class="shot"><div class="shot__inner"><img src="assets/lab/05.jpg" alt="Mission Control, dashboard de infraestructura" loading="lazy" data-parallax-img="0.30" /></div></figure>
+            <div class="labitem__body">
+              <span class="labitem__n">05 · Herramienta</span>
+              <h3>Mission Control</h3>
+              <p>Dashboard para controlar la infraestructura a distancia por WebSocket, desde la LAN o por Tailscale.</p>
+            </div>
+          </article>
+          <article class="labitem">
+            <figure class="shot"><div class="shot__inner"><img src="assets/lab/06.jpg" alt="Panel OSINT de reconocimiento" loading="lazy" data-parallax-img="0.16" /></div></figure>
+            <div class="labitem__body">
+              <span class="labitem__n">06 · Seguridad</span>
+              <h3>Panel OSINT</h3>
+              <p>Herramienta de reconocimiento (email, usuario, IP, dominio…) que funciona sin API keys.</p>
+            </div>
+          </article>
         </div>
         <ul class="lab__facts" data-reveal>
-          <li><b>Mini PC</b><span>i7 · Ubuntu Server</span></li>
-          <li><b>Docker</b><span>servicios aislados</span></li>
-          <li><b>Tailscale</b><span>VPN mesh privada</span></li>
-          <li><b>Cloudflare</b><span>dominios + túneles</span></li>
-          <li><b>Backups</b><span>automáticos</span></li>
-          <li><b>Monitorización</b><span>logs y estado 24/7</span></li>
+          <li><b>Mini PC</b><span>i7 · Ubuntu Server, encendido 24/7 en casa</span></li>
+          <li><b>Docker</b><span>cada servicio aislado y reproducible</span></li>
+          <li><b>Tailscale</b><span>acceso privado por VPN, sin abrir puertos</span></li>
+          <li><b>Cloudflare</b><span>dominios y túneles HTTPS</span></li>
+          <li><b>Backups</b><span>automáticos y programados</span></li>
+          <li><b>Monitorización</b><span>logs y estado de cada servicio</span></li>
         </ul>
       </div>
     </section>
