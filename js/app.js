@@ -15,6 +15,29 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---------- Tema día / noche ---------- */
+  var themeToggle = document.getElementById("themeToggle");
+  var themeIcon = document.getElementById("themeIcon");
+  var savedTheme = null;
+  try { savedTheme = localStorage.getItem("theme"); } catch (e) {}
+  var theme = savedTheme || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+  function applyTheme(t) {
+    document.documentElement.setAttribute("data-theme", t);
+    if (themeIcon) themeIcon.textContent = t === "dark" ? "🌙" : "☀️";
+    if (themeToggle) themeToggle.setAttribute("aria-pressed", String(t === "light"));
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", t === "dark" ? "#08080c" : "#ffffff");
+    window.dispatchEvent(new CustomEvent("themechange", { detail: { theme: t } }));
+  }
+  applyTheme(theme);
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+      theme = theme === "dark" ? "light" : "dark";
+      applyTheme(theme);
+      try { localStorage.setItem("theme", theme); } catch (e) {}
+    });
+  }
+
   /* ---------- Duplicar marquees para loop continuo ---------- */
   document.querySelectorAll(".marquee__track, .row__track").forEach(function (t) {
     t.innerHTML += t.innerHTML;

@@ -16,6 +16,7 @@
   <meta property="og:image" content="https://elfleoncha.github.io/FLeon/assets/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <script>(function(){try{var t=localStorage.getItem("theme")||(((window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches))?"light":"dark");document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
   <link rel="stylesheet" href="css/fonts.css" />
   <link rel="stylesheet" href="css/style.css" />
   <script>document.documentElement.classList.add("js");</script>
@@ -61,8 +62,11 @@
       <a href="#method" data-nav>Método</a>
       <a href="#contact" data-nav>Contacto</a>
     </nav>
-    <a class="nav__cta magnetic" href="assets/cv.pdf" data-nav>CV ↗</a>
-    <button class="nav__burger" id="burger" aria-label="Menú"><span></span><span></span></button>
+    <div class="nav__right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo día/noche" title="Modo día / noche"><span id="themeIcon">🌙</span></button>
+      <a class="nav__cta magnetic" href="assets/cv.pdf" data-nav>CV ↗</a>
+      <button class="nav__burger" id="burger" aria-label="Menú"><span></span><span></span></button>
+    </div>
   </header>
 
   <main>

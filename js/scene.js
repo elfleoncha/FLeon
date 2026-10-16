@@ -53,6 +53,22 @@ if (canvas && hero) {
     );
     mesh.add(core);
 
+    /* --- Colores segun tema (dia/noche) --- */
+    function applySceneTheme() {
+      const cs = getComputedStyle(document.documentElement);
+      const a = new THREE.Color((cs.getPropertyValue("--accent") || "#a855f7").trim());
+      const b = new THREE.Color((cs.getPropertyValue("--accent2") || "#c6ff3d").trim());
+      points.material.color.copy(b);
+      mesh.material.color.copy(a);
+      core.material.color.copy(b);
+      const light = document.documentElement.getAttribute("data-theme") === "light";
+      points.material.opacity = light ? 0.7 : 0.85;
+      mesh.material.opacity = light ? 0.42 : 0.30;
+      core.material.opacity = light ? 0.32 : 0.22;
+    }
+    applySceneTheme();
+    window.addEventListener("themechange", applySceneTheme);
+
     /* --- Interacción --- */
     let mx = 0, my = 0, tx = 0, ty = 0, sy = 0;
     window.addEventListener("pointermove", (e) => {
