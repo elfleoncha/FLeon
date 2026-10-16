@@ -283,6 +283,14 @@ html.no-anim .work__viewport, .work--fallback .work__viewport { overflow-x: auto
 .proj__more li { position: relative; padding-left: 24px; color: color-mix(in srgb, var(--ink-media) 85%, transparent); font-size: 1rem; }
 .proj__more li::before { content: "▹"; position: absolute; left: 0; color: var(--accent2); }
 
+/* BAND (marquee reactivo) */
+.band { overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bg-2); padding: clamp(18px, 3vh, 34px) 0; }
+.band__track { display: inline-block; white-space: nowrap; will-change: transform; font-size: clamp(1.8rem, 6.5vw, 5.4rem); font-weight: 700; text-transform: uppercase; letter-spacing: -.03em; color: var(--fg); }
+.band__track em { color: var(--accent); font-style: normal; }
+
+/* Shot: magnet al pasar el raton */
+.shot__inner { position: absolute; inset: 0; will-change: transform; }
+
 /* =========================== REVEAL =========================== */
 .js [data-reveal] { opacity: 0; transform: translateY(28px); }
 html.no-anim [data-reveal], html.no-anim .line__inner, html.no-anim .about__big .w { opacity: 1 !important; transform: none !important; }

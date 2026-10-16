@@ -217,6 +217,33 @@
       });
     });
 
+    /* banda: marquee reactivo a la velocidad del scroll */
+    var band = document.getElementById("bandTrack");
+    if (band) {
+      band.innerHTML = band.innerHTML + band.innerHTML + band.innerHTML + band.innerHTML;
+      gsap.set(band, { xPercent: -12 });
+      gsap.to(band, { xPercent: -58, ease: "none",
+        scrollTrigger: { trigger: ".band", start: "top bottom", end: "bottom top", scrub: true } });
+      var skewSetter = gsap.quickTo(band, "skewX", { duration: 0.45, ease: "power2" });
+      ST.create({ onUpdate: function (self) { skewSetter(gsap.utils.clamp(-11, 11, self.getVelocity() / -260)); } });
+    }
+
+    /* galeria: magnet hacia el cursor */
+    if (fine) {
+      gsap.utils.toArray(".shot").forEach(function (shot) {
+        var inner = shot.querySelector(".shot__inner");
+        if (!inner) return;
+        var qx = gsap.quickTo(inner, "xPercent", { duration: 0.6, ease: "power3" });
+        var qy = gsap.quickTo(inner, "yPercent", { duration: 0.6, ease: "power3" });
+        shot.addEventListener("pointermove", function (e) {
+          var r = shot.getBoundingClientRect();
+          qx(((e.clientX - r.left) / r.width - 0.5) * 9);
+          qy(((e.clientY - r.top) / r.height - 0.5) * 9);
+        });
+        shot.addEventListener("pointerleave", function () { qx(0); qy(0); });
+      });
+    }
+
     /* hero se difumina al salir */
     gsap.to(".hero__content", {
       yPercent: 26, opacity: 0, ease: "none",
