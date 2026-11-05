@@ -386,3 +386,6 @@ html.no-anim [data-reveal], html.no-anim .line__inner, html.no-anim .about__big 
   .nav, .grain, .cursor, .cursor-dot, .preloader, .hero__canvas, .marquee, .rows { display: none !important; }
   body { background: #fff; color: #000; }
 }
+
+.proj--featured { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 18px 55px color-mix(in srgb, var(--accent) 22%, transparent); }
+.proj--featured .proj__num { color: color-mix(in srgb, var(--accent) 55%, transparent); }
